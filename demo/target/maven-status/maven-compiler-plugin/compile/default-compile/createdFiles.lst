@@ -1,0 +1,11 @@
+com\zeus\dao\Paciente.class
+com\zeus\App.class
+com\zeus\dao\Usuario.class
+com\zeus\dao\Diente.class
+com\zeus\dao\Cita.class
+com\zeus\dao\Antecedente.class
+com\zeus\until\HibernateUtil.class
+com\zeus\dao\Documento.class
+com\zeus\dao\EstadoDiente.class
+com\zeus\dao\Tratamiento.class
+com\zeus\dao\Odontograma.class
