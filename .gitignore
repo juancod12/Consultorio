@@ -10,3 +10,10 @@ target/
 
 # Ignorar archivos de logs
 *.log
+
+# Ignorar configuración de Maven local
+pom.xml
+
+# Ignorar archivos sensibles
+demo/src/main/resources/hibernate.cfg.xml
+demo/src/main/java/com/zeus/until/HibernateUtil.java
