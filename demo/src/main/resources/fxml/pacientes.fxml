@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SplitMenuButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1100.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.zeus.controller.pacientesCon">
+   <children>
+      <Pane layoutY="-6.0" prefHeight="103.0" prefWidth="1100.0" style="-fx-background-color: #208987;">
+         <children>
+            <Label layoutX="46.0" layoutY="29.0" text="Pacientes" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font>
+            </Label>
+            <Button layoutX="211.0" layoutY="26.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="191.0" style="-fx-background-color: #A4E1EA; -fx-text-fill: #208987; -fx-background-radius: 25;" text="Citas">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Button>
+            <Button layoutX="999.0" layoutY="23.0" mnemonicParsing="false" prefHeight="57.0" prefWidth="66.0" style="-fx-background-color: trasparent; -fx-background-image: url('/imagenes/campana.png'); -fx-background-size: contain; -fx-background-repeat: no-repeat;" />
+         </children>
+      </Pane>
+      <GridPane layoutX="17.0" layoutY="128.0" prefHeight="512.0" prefWidth="1052.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="220.0" minHeight="0.0" prefHeight="48.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="522.0" minHeight="0.0" prefHeight="28.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="520.0" minHeight="10.0" prefHeight="436.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <HBox prefHeight="33.0" prefWidth="900.0">
+               <children>
+                  <TextField prefHeight="33.0" prefWidth="514.0" style="-fx-border-color: white white #A4E1EA white; -fx-border-width: 4; -fx-background-color: white;" />
+                  <Pane prefHeight="33.0" prefWidth="12.0" />
+                  <Button mnemonicParsing="false" prefHeight="33.0" prefWidth="38.0" style="-fx-background-image: url('/imagenes/buscar.png'); -fx-background-repeat: no-repeat; -fx-background-size: contain; -fx-background-color: trasparent;" />
+                  <Pane prefHeight="33.0" prefWidth="14.0" />
+                  <SplitMenuButton mnemonicParsing="false" prefHeight="35.0" prefWidth="227.0" text="FILTRAR RESULTADOS">
+                    <items>
+                      <MenuItem mnemonicParsing="false" text="Action 1" />
+                      <MenuItem mnemonicParsing="false" text="Action 2" />
+                    </items>
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </SplitMenuButton>
+                  <Pane prefHeight="35.0" prefWidth="73.0" />
+                  <Button mnemonicParsing="false" onAction="#nuevoPaciente" prefHeight="33.0" prefWidth="182.0" style="-fx-background-color: #208987;" text="Nuevo Paciente " textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="1">
+               <children>
+                  <Label prefHeight="28.0" prefWidth="184.0" style="-fx-text-fill: #208987;" text=" CEDULA">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="28.0" prefWidth="172.0" style="-fx-text-fill: #208987;" text="Nombre">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="28.0" prefWidth="167.0" style="-fx-text-fill: #208987;" text="Apellido">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="35.0" prefWidth="222.0" style="-fx-text-fill: #208987;" text="TELEFONO">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="35.0" prefWidth="297.0" style="-fx-text-fill: #208987;" text="DESCRIPCION">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="28.0" prefWidth="60.0" style="-fx-text-fill: #208987;" text="VER">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <ListView fx:id="pacientesView" prefHeight="469.0" prefWidth="1053.0" GridPane.rowIndex="2" />
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>

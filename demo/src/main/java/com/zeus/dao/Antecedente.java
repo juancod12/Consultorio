@@ -2,38 +2,42 @@ package com.zeus.dao;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+
 
 
 @Entity
 public class Antecedente {
     @Id
-    @GeneratedValue(strategy =  GenerationType.IDENTITY)
-    private Long idAntecedente;
+    @Column(length = 10)
+    private int idAntecedente;
     @Column
     private String patologicos;
     @Column
     private String alergicos;
     @Column
+    private String farmacologicos;
+    @Column
     private String odontologicos;
     @Column
     private String heredofamiliares;
 
+    
     public Antecedente() {
     }
 
-    public Antecedente(Long idAntecedente, String patologicos, String alergicos, String odontologicos,
-            String heredofamiliares) {
+    public Antecedente(int idAntecedente, String patologicos, String alergicos, String farmacologicos,
+            String odontologicos, String heredofamiliares) {
         this.idAntecedente = idAntecedente;
         this.patologicos = patologicos;
         this.alergicos = alergicos;
+        this.farmacologicos = farmacologicos;
         this.odontologicos = odontologicos;
         this.heredofamiliares = heredofamiliares;
     }
+
     //setters
-    public void setIdAntecedente(Long idAntecedente) {
+    public void setIdAntecedente(int idAntecedente) {
         this.idAntecedente = idAntecedente;
     }
 
@@ -52,8 +56,21 @@ public class Antecedente {
     public void setHeredofamiliares(String heredofamiliares) {
         this.heredofamiliares = heredofamiliares;
     }
+    
+
+    public void setFarmacologicos(String farmacologicos) {
+        this.farmacologicos = farmacologicos;
+    }
+
+
+
     // getters
-    public Long getIdAntecedente() {
+
+    public String getFarmacologicos() {
+        return farmacologicos;
+    }
+
+    public int getIdAntecedente() {
         return idAntecedente;
     }
 
@@ -72,6 +89,7 @@ public class Antecedente {
     public String getHeredofamiliares() {
         return heredofamiliares;
     }
+
 
     @Override
     public String toString() {

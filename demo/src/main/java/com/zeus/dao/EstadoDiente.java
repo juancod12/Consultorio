@@ -10,7 +10,6 @@ import jakarta.persistence.Table;
 @Entity
 @Table(name = "estado_diente")
 public class EstadoDiente {
-    
     @Id
     @GeneratedValue(strategy =  GenerationType.IDENTITY)
     private Long idEstadoDiente;

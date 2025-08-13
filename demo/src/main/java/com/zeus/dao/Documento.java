@@ -2,15 +2,13 @@ package com.zeus.dao;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
 @Entity
 public class Documento {
     @Id
-    @GeneratedValue(strategy =  GenerationType.IDENTITY)
-    private Long idDocumento;
+    @Column(length = 10)
+    private int idDocumento;
     @Column
     private String patologicos;
     @Column
@@ -23,7 +21,7 @@ public class Documento {
     public Documento() {
     }
 
-    public Documento(Long idDocumento, String patologicos, String alergicos, String odontologicos,
+    public Documento(int idDocumento, String patologicos, String alergicos, String odontologicos,
             String heredofamiliares) {
         this.idDocumento = idDocumento;
         this.patologicos = patologicos;
@@ -33,7 +31,7 @@ public class Documento {
     }
 
     //setters
-    public void setIdDocumento(Long idDocumento) {
+    public void setIdDocumento(int idDocumento) {
         this.idDocumento = idDocumento;
     }
 
@@ -54,7 +52,7 @@ public class Documento {
     }
 
     //getters
-    public Long getIdDocumento() {
+    public int getIdDocumento() {
         return idDocumento;
     }
 

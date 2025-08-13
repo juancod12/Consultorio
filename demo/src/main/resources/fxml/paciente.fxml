@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1100.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.zeus.controller.perfilPaciente">
+   <children>
+      <Pane layoutY="-6.0" prefHeight="103.0" prefWidth="1100.0" style="-fx-background-color: #208987;">
+         <children>
+            <Label layoutX="46.0" layoutY="29.0" text="Perfil" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font>
+            </Label>
+            <Button layoutX="861.0" layoutY="26.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="133.0" style="-fx-background-color: #A4E1EA; -fx-text-fill: #208987; -fx-background-radius: 25;" text="Menu">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Button>
+            <Button layoutX="155.0" layoutY="26.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="261.0" style="-fx-background-color: #A4E1EA; -fx-text-fill: #208987; -fx-background-radius: 25;" text="Historial de Citas">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Button>
+            <Button layoutX="433.0" layoutY="26.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="191.0" style="-fx-background-color: #A4E1EA; -fx-text-fill: #208987; -fx-background-radius: 25;" text="Documentos">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Button>
+            <Button layoutX="648.0" layoutY="26.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="191.0" style="-fx-background-color: #A4E1EA; -fx-text-fill: #208987; -fx-background-radius: 25;" text="Pacientes">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <Pane layoutX="56.0" layoutY="122.0" prefHeight="500.0" prefWidth="425.0" style="-fx-background-color: #eaf1ff;">
+         <children>
+            <VBox layoutX="28.0" layoutY="193.0" prefHeight="293.0" prefWidth="370.0" style="-fx-border-color: #A4E1EA; -fx-border-width: 3; -fx-border-radius: 10;">
+               <children>
+                  <HBox prefHeight="80.0" prefWidth="200.0">
+                     <children>
+                        <Label prefHeight="44.0" prefWidth="219.0" style="-fx-border-color: #A4E1EA; -fx-text-fill: #208987;" text="       NOMBRE :">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font></Label>
+                        <Label fx:id="nombre" prefHeight="50.0" prefWidth="364.0" style="-fx-border-color: #A4E1EA;" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="80.0" prefWidth="364.0">
+                     <children>
+                        <Label prefHeight="44.0" prefWidth="219.0" style="-fx-border-color: #A4E1EA; -fx-text-fill: #208987;" text="       APELLIDO :">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font></Label>
+                        <Label fx:id="apellido" prefHeight="80.0" prefWidth="364.0" style="-fx-border-color: #A4E1EA;" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="80.0" prefWidth="200.0">
+                     <children>
+                        <Label prefHeight="80.0" prefWidth="219.0" style="-fx-border-color: #A4E1EA; -fx-text-fill: #208987;" text="       EDAD :">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font></Label>
+                        <Label fx:id="edad" prefHeight="50.0" prefWidth="364.0" style="-fx-border-color: #A4E1EA;" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="80.0" prefWidth="200.0">
+                     <children>
+                        <Label prefHeight="80.0" prefWidth="219.0" style="-fx-border-color: #A4E1EA; -fx-text-fill: #208987;" text="       CEDULA :">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font></Label>
+                        <Label fx:id="cedula" prefHeight="80.0" prefWidth="364.0" style="-fx-border-color: #A4E1EA;" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="80.0" prefWidth="200.0">
+                     <children>
+                        <Label prefHeight="80.0" prefWidth="219.0" style="-fx-border-color: #A4E1EA; -fx-text-fill: #208987;" text="       TELEFONO :">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font></Label>
+                        <Label fx:id="telefono" prefHeight="80.0" prefWidth="364.0" style="-fx-border-color: #A4E1EA;" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label prefHeight="100.0" prefWidth="219.0" style="-fx-border-color: #A4E1EA; -fx-text-fill: #208987;" text="      DESCRIPCION :">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font></Label>
+                        <Label fx:id="descripcion" prefHeight="65.0" prefWidth="364.0" style="-fx-wrap-text: true; -fx-text-alignment: TOP_RIGTH; -fx-border-color: #A4E1EA; -fx-label-padding: 10;" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <Pane fx:id="panePerfil" layoutX="144.0" layoutY="31.0" prefHeight="149.0" prefWidth="129.0" style="-fx-border-color: #A4E1EA; -fx-border-width: 3; -fx-border-radius: 20; -fx-background-radius: 20; -fx-background-position: center;">
+               <children>
+                  <ImageView fx:id="imagenPerfil" fitHeight="158.0" fitWidth="141.0" layoutX="-5.0" layoutY="-4.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <Pane layoutX="550.0" layoutY="122.0" prefHeight="500.0" prefWidth="508.0" style="-fx-background-color: #eaf1ff;">
+         <children>
+            <VBox layoutX="21.0" layoutY="309.0" prefHeight="172.0" prefWidth="461.0">
+               <children>
+                  <HBox prefHeight="42.0" prefWidth="350.0" style="-fx-background-color: #A4E1EA;">
+                     <children>
+                        <Label prefHeight="42.0" prefWidth="404.0" text="Odontogramas">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </Label>
+                        <Pane prefHeight="200.0" prefWidth="200.0">
+                           <children>
+                              <Button fx:id="nuevoOdontograma" layoutX="73.0" layoutY="3.0" mnemonicParsing="false" onAction="#NuevoOdontograma" prefHeight="35.0" prefWidth="35.0" style="-fx-background-radius: 25; -fx-background-color: white; -fx-background-repeat: no-repeat; -fx-background-image: url('/imagenes/mas.png'); -fx-background-position: center; -fx-background-size: 44;" />
+                           </children>
+                        </Pane>
+                     </children>
+                  </HBox>
+                  <ListView fx:id="odontogramaViw" prefHeight="129.0" prefWidth="461.0" />
+               </children>
+            </VBox>
+            <VBox layoutX="25.0" layoutY="19.0" prefHeight="273.0" prefWidth="461.0">
+               <children>
+                  <HBox prefHeight="45.5" prefWidth="100.0" style="-fx-background-color: #A4E1EA;">
+                     <children>
+                        <Label prefHeight="45.0" prefWidth="341.0" text="Antecedentes">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </Label>
+                        <Pane prefHeight="200.0" prefWidth="200.0">
+                           <children>
+                              <Button fx:id="guardarBt" layoutY="10.0" mnemonicParsing="false" onAction="#guardarAct" style="-fx-background-color: green;" text="Guardar" textFill="WHITE" visible="false">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="cancelarBt" layoutX="80.0" layoutY="10.0" mnemonicParsing="false" onAction="#cancelarAct" prefHeight="27.0" prefWidth="75.0" style="-fx-background-color: red;" text="cancelar" textFill="#fcfafa" visible="false">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </Pane>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="45.5" prefWidth="473.0">
+                     <children>
+                        <Label prefHeight="45.5" prefWidth="150.0" text="PATOLOGICOS " />
+                        <StackPane fx:id="patologicosSKP" prefHeight="45.0" prefWidth="311.0">
+                           <children>
+                              <Label fx:id="patologicos" prefHeight="45.0" prefWidth="312.0" style="-fx-border-color: #A4E1EA; -fx-border-width: 0 0 2 0;" />
+                           </children>
+                        </StackPane>
+                        <Button fx:id="patologicosBT" mnemonicParsing="false" onAction="#patologicos" prefHeight="45.0" prefWidth="52.0" style="-fx-background-color: trasparent; -fx-background-image: url('/imagenes/lapiz.png'); -fx-background-repeat: no-repeat; -fx-background-size: 15; -fx-background-position: center;" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="45.5" prefWidth="473.0">
+                     <children>
+                        <Label prefHeight="45.5" prefWidth="150.0" text="ALERGICOS " />
+                        <StackPane fx:id="alergicosSKP" prefHeight="45.0" prefWidth="311.0">
+                           <children>
+                              <Label fx:id="alergicos" prefHeight="45.0" prefWidth="312.0" style="-fx-border-color: #A4E1EA; -fx-border-width: 0 0 2 0;" />
+                           </children>
+                        </StackPane>
+                        <Button fx:id="alergicosBT" mnemonicParsing="false" onAction="#alergicos" prefHeight="45.0" prefWidth="52.0" style="-fx-background-color: trasparent; -fx-background-image: url('/imagenes/lapiz.png'); -fx-background-repeat: no-repeat; -fx-background-size: 15; -fx-background-position: center;" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="45.5" prefWidth="473.0">
+                     <children>
+                        <Label prefHeight="45.5" prefWidth="150.0" text="FARMACOLOGICOS" />
+                        <StackPane fx:id="farmacologicosSKP" prefHeight="45.0" prefWidth="311.0">
+                           <children>
+                              <Label fx:id="farmacologicos" prefHeight="46.0" prefWidth="312.0" style="-fx-border-color: #A4E1EA; -fx-border-width: 0 0 2 0;" />
+                           </children>
+                        </StackPane>
+                        <Button fx:id="farmacologicosBT" mnemonicParsing="false" onAction="#farmacologicos" prefHeight="45.0" prefWidth="52.0" style="-fx-background-color: trasparent; -fx-background-image: url('/imagenes/lapiz.png'); -fx-background-repeat: no-repeat; -fx-background-size: 15; -fx-background-position: center;" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="45.5" prefWidth="473.0">
+                     <children>
+                        <Label prefHeight="45.5" prefWidth="150.0" text="ODONTOLOGICOS" />
+                        <StackPane fx:id="odontologicosSKP" prefHeight="46.0" prefWidth="312.0">
+                           <children>
+                              <Label fx:id="odontologicos" prefHeight="46.0" prefWidth="312.0" style="-fx-border-color: #A4E1EA; -fx-border-width: 0 0 2 0;" />
+                           </children>
+                        </StackPane>
+                        <Button fx:id="odontologicosBT" mnemonicParsing="false" onAction="#odontologicos" prefHeight="45.0" prefWidth="52.0" style="-fx-background-color: trasparent; -fx-background-image: url('/imagenes/lapiz.png'); -fx-background-repeat: no-repeat; -fx-background-size: 15; -fx-background-position: center;" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="45.5" prefWidth="473.0">
+                     <children>
+                        <Label prefHeight="45.5" prefWidth="150.0" text="HEREDOFAMILIARES" />
+                        <StackPane fx:id="heredofamiliaresSKP" prefHeight="46.0" prefWidth="313.0">
+                           <children>
+                              <Label fx:id="heredofamiliares" prefHeight="46.0" prefWidth="321.0" style="-fx-border-color: #A4E1EA; -fx-border-width: 0 0 2 0;" />
+                           </children>
+                        </StackPane>
+                        <Button fx:id="heredofamiliaresBT" mnemonicParsing="false" onAction="#heredofamiliares" prefHeight="45.0" prefWidth="52.0" style="-fx-background-color: trasparent; -fx-background-image: url('/imagenes/lapiz.png'); -fx-background-repeat: no-repeat; -fx-background-size: 15; -fx-background-position: center;" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
